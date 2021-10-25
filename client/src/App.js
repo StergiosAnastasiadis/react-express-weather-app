@@ -11,8 +11,9 @@ function App() {
   const [url, setUrl] = useState("");
 
   const getData = async () => {
-    const rawData = await fetch(`https://weather-app-38.herokuapp.com/api/${country}`)
-
+    const rawData = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${process.env.API_KEY}`)
+    // http://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${process.env.REACT_APP_API_KEY}
+    // https://weather-app-38.herokuapp.com/api/${country}
     if (rawData.status === 404) {
       setName("Something went wrong");
       setDegree(`Your input was: ${country}`);
