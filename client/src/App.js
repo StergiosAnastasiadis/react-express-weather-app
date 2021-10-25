@@ -11,7 +11,7 @@ function App() {
   const [url, setUrl] = useState("");
 
   const getData = async () => {
-    const rawData = await fetch(`http://localhost:5000/api/${country}`)
+    const rawData = await fetch(`https://weather-app-38.herokuapp.com/api/${country}`)
 
     if (rawData.status === 404) {
       setName("Something went wrong");
