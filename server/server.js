@@ -32,7 +32,7 @@ app.get("/api/:country", (req, res) => {
   const getData = () => {
     request(url, (error, response, body) => {
       if (response.statusCode === 200) {
-        const data = JSON.parse(body);
+        const data = JSON.parse(response);
         console.log("Status Code: ", response.statusCode);
         res.send(data);
       } else {
