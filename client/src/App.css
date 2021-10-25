@@ -1,0 +1,76 @@
+html{
+  height:100%;
+  background: linear-gradient(0deg, #28456e86 5%, #28456E 50%) no-repeat;
+}
+
+/*-webkit-linear-gradient(65deg, #A683E3 40%, #E4E9FD 50%)*/
+
+body {
+  text-align: center;
+}
+
+.App {
+  color: rgb(228, 228, 228);
+}
+
+input {
+  background-color: #cccccc4f ; /*#CCCCCC  #828282; #F2F3F5 #214D86;*/
+  color: rgb(0, 0, 0); /* rgb(245, 218, 200); */
+  text-align: center;
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 50px;
+  margin-top: 50px;
+  border-style: hidden;
+  outline: none;
+  border-radius: 50px;
+}
+
+button {
+  margin-left: 5px;
+  height: 45px;
+  width: 45px;
+  background-color: #71717177;
+  color: rgb(230, 230, 230);;
+  position: relative;
+  border-radius: 50%;
+  border: 0px;
+  font-size: 20px;
+  font-weight: 900;
+  outline: none;
+}
+
+img {
+  height: 80px;
+}
+
+footer {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+/*
+#6f9cdb
+
+button text color rgb(245, 218, 200);
+
+Button
+rgb(230, 230, 230);
+#2B2B2B
+#717171
+*/
+
+/*
+Error Color
+
+#F35369
+#FFC0C7
+#FA383E
+#FBCCD2
+*/
+/*background-color: #28456E;*/
