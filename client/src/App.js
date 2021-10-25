@@ -11,9 +11,8 @@ function App() {
   const [url, setUrl] = useState("");
 
   const getData = async () => {
-    const rawData = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${process.env.API_KEY}`)
-    // http://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${process.env.REACT_APP_API_KEY}
-    // https://weather-app-38.herokuapp.com/api/${country}
+    const rawData = await fetch(`https://weather-app-38.herokuapp.com/api/${country}`)
+
     if (rawData.status === 404) {
       setName("Something went wrong");
       setDegree(`Your input was: ${country}`);
@@ -31,7 +30,7 @@ function App() {
       setDegree(degree + " °C");
       setMain(data.weather[0].main);
       setDescription(data.weather[0].description);
-      let x = `http://openweathermap.org/img/wn/${data.weather[0].icon}` + ".png";
+      let x = `https://openweathermap.org/img/wn/${data.weather[0].icon}` + ".png";
       setUrl(x);
     }
   }
