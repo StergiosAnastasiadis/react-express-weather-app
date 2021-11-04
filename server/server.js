@@ -18,7 +18,6 @@ app.get("/api/:country", (req, res) => {
 
   const country = req.params.country;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${country}&units=metric&appid=${process.env.API_KEY}`;
-  // https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${process.env.API_KEY}
 
   const getData = () => {
     request(url, (error, response, body) => {
@@ -36,7 +35,7 @@ app.get("/api/:country", (req, res) => {
 })
 
 if (process.env.NODE_ENV === "production") {
-  
+
   app.use(express.static(path.join(__dirname, "../client/build")));
 
   app.get("*", (req, res) => {
