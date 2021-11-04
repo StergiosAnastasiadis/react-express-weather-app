@@ -25,13 +25,12 @@ function App() {
       const data = await rawData.json();
 
       setName(data.name);
-      let degree = data.main.temp;
-      degree = parseInt(data.main.temp - 272.15);
+      let degree = parseInt(data.main.temp);
       setDegree(degree + " °C");
       setMain(data.weather[0].main);
       setDescription(data.weather[0].description);
-      let x = `https://openweathermap.org/img/wn/${data.weather[0].icon}` + ".png";
-      setUrl(x);
+      let iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}` + ".png";
+      setUrl(iconURL);
     }
   }
 

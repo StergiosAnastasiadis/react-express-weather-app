@@ -4,13 +4,13 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "install-all": "concurrently \"yarn install\" \"cd client && yarn install\"",
+    "install-all": "concurrently \"yarn \" \"cd client && yarn \"",
     "client": "cd client && yarn start",
     "server": "nodemon server/server.js",
     "dev": "concurrently \"nodemon server/server.js\" \"cd client && yarn run start\"",
     "build": "cd client && yarn build",
     "start": "node server/server.js",
-    "heroku-postbuild": "cd client && yarn install && yarn run build"
+    "heroku-postbuild": "cd client && yarn  && yarn run build"
   },
   "dependencies": {
     "concurrently": "^6.3.0",
