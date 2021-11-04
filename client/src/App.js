@@ -37,6 +37,7 @@ function App() {
   function inputValidation(event) {
     let text = event.target.value;
     text = text.replace(/[0-9]/g, '');
+    text = text.replace(/[^\w\s]/gi, '');
     setCountry(text);
   }
 
